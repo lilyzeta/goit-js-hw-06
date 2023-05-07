@@ -6,9 +6,12 @@ const ingredients = [
   "Herbs",
   "Condiments",
 ];
-for (const ingredient of ingredients) {
-  let purps = document.createElement("li");
-  purps.setAttribute(`${ingredients.children}`, ingredients.childrens);
-  purps.classList.add("items");
-  console.log(purps);
-}
+let listEl = document.querySelector("ul");
+let arr = [];
+ingredients.forEach((ingredient) => {
+  const itemEl = document.createElement("li");
+  itemEl.textContent = ingredient;
+  itemEl.classList.add("item");
+  arr.push(itemEl);
+});
+listEl.append(...arr);
