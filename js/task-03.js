@@ -13,7 +13,15 @@ const images = [
   },
 ];
 
-let quetzal = document.querySelector("ul");
-images.forEach((image) => {
-  quetzal.insertAdjacentHTML("afterbegin", `${image}`);
-});
+const markup = images
+  .map(
+    (image) =>
+      `<li><img src="${image.url}" alt="${image.alt}" width= "200" height= "150"></li> `
+  )
+  .join("");
+const gallery = document.querySelector("ul");
+gallery.insertAdjacentHTML("beforeend", markup);
+gallery.setAttribute(
+  "style",
+  "color:tomato; list-style:none; border: 20px solid tomato; border-radius: 40px;"
+);
