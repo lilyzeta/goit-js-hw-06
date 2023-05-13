@@ -1,5 +1,5 @@
 const counter = document.querySelector("#value");
-const count = counter.innerHTML;
+let count = counter.innerHTML;
 
 const increment = () => {
   count++;
