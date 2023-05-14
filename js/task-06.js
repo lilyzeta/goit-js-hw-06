@@ -4,8 +4,10 @@ stringInput.addEventListener("blur", blurCheck);
 
 function blurCheck(blur) {
   if (blur.target.value.length !== 6) {
-    stringInput.style.borderColor = "red";
+    stringInput.classList.remove("valid");
+    stringInput.classList.add("invalid");
   } else {
-    stringInput.style.borderColor = "green";
+    stringInput.classList.remove("invalid");
+    stringInput.classList.add("valid");
   }
 }
