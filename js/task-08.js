@@ -12,7 +12,7 @@ function submitAct(event) {
   const email = form.elements.email;
   const password = form.elements.password;
 
-  if (email.value.length === 0 || password.value.length === 0) {
+  if (email.value.length === 0 || password.value.trim() === "") {
     alert("All Fields must be filled in");
   } else {
     users.email = email.value;
